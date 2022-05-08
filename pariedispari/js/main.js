@@ -17,7 +17,10 @@ while(scelta != odd && scelta != even){
 } // controllo sulla variabile scelta 
 console.log("la tua scelta è :",scelta) // stampo la scelta
 
-const numGuest = Number(prompt("scegli un un numero tra 1 e 5"));
+let numGuest = Number(prompt("scegli un un numero tra 1 e 5"));
+while(numGuest < 1 || numGuest > 5){
+    numGuest = Number(prompt("scegli un un numero tra 1 e 5"));
+} 
 console.log("numero guest:",numGuest); // stampo numero guest
 
 let numCpu = randomNumber(1,5); // invoca funzione randomNumber
@@ -27,18 +30,6 @@ const sum = numGuest + numCpu ;
 evenOrOdd (sum,even,scelta); // verifico se la somma è pari e stampo il risultato
 
 console.log("somma numeri:",sum);
-
-
-
-
-
-/*if (scelta === even ){
-    console.log ("il giocatore ha vinto")
-} else {
-    console.log("il giocatore ha perso")
-} */
-
-
 
 // funzione numero random
 function randomNumber (min,max) {
